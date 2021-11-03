@@ -1,0 +1,9 @@
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="app-comment"><app-comment
+      *ngFor="let comment of comments | paginate: { itemsPerPage: 16, currentPage: page, totalItems: totalLength  }"
+                                          [comment]="comment"></app-comment></div>
+  </div>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
